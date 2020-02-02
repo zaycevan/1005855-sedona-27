@@ -22,7 +22,58 @@
     <h1 class="visualy-hidden">Выбор отеля </h1>
    <section class="filters">
     <h2 class="visualy-hidden">Фильтр отелей</h2>
-    <!--здесь будет форма-->
+    <form class="filter-hotel" method="get" action="https://echo.htmlacademy.ru">
+    <fieldset class="infrastructure">
+      <legend class="infrastructure-legend">Инфраструктура:</legend>
+      <ul>
+        <li class="infrastructure-item">
+          <input class="infrastructure-checkbox" type="checkbox" id="pool" name="pool" checked>
+          <label for="pool">Бассейн</label>
+        </li>
+        <li class="infrastructure-item">
+          <input class="infrastructure-checkbox" type="checkbox" id="parking" name="parking">
+          <label for="parking">Парковка</label>
+        </li>
+        <li class="infrastructure-item">
+          <input class="infrastructure-checkbox" type="checkbox" id="wifi" name="wifi">
+          <label for="wifi">Wi-Fi</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="accommodation">
+      <legend class="accommodation-legend">Тип жилья:</legend>
+      <ul>
+        <li class="accommodation-item">
+          <input class="accommodation-checkbox" type="checkbox" id="hotel" name="hotel" checked>
+          <label for="hotel">Гостиница</label>
+        </li>
+        <li class="accommodation-item">
+          <input class="accommodation-checkbox" type="checkbox" id="motel" name="motel" checked>
+          <label for="motel">Мотель</label>
+        </li>
+        <li class="accommodation-item">
+          <input class="accommodation-checkbox" type="checkbox" id="apartment" name="apartment" checked>
+          <label for="apartment">Апартаменты</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="price">
+      <legend class="price-legend"> Стоимость в сутки (Р):</legend>
+      <ul>
+        <li class="price-item">
+          <label for="price-low">от</label>
+          <input type="number" id="price-low" name="price-low" value="0" aria-label="Минимальная цена">
+          <input type="range" id="price-low-range" name="price-low-range"  min="0" max="3000" step="1" value="0" aria-label="Минимальная цена">
+        </li>
+        <li class="price-item">
+          <label for="price-high">до</label>
+          <input type="number" id="price-high" name="price-high" value="3000" aria-label="Максимальная цена">
+          <input type="range" id="price-high-range" name="price-high-range"  min="0" max="3000" step="1" value="3000" aria-label="Максимальная цена">
+        </li>
+      </ul>
+    </fieldset>
+    <button type="submit">Показать</button>
+    </form>
   </section>
   <section class="sorting">
     <h2 class="visualy-hidden">Сортировка отелей</h2>
@@ -40,12 +91,12 @@
     <h2 class="visualy-hidden">Результат поиска отелей</h2>
     <ul class="hotel-list">
         <li class="hotel-item">
-          <h3> <a href="catalog-item-1.html"> Amara Resort & Spa </a> </h3>
+          <a href="catalog-item-1.html">
+            <h3> Amara Resort & Spa </h3>
             <p>
-              <a href="catalog-item-1.html"> 
-              <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фотография отеля">
-              </a>
+              <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фотография отеля"> 
             </p>
+              </a>     
             <p class="hotel-type"> Гостиница  </p>
             <p class="hotel-price"> От 4000 Р.  </p>
             <a class="hotel-info" href="#">Подробнее</a>
@@ -58,12 +109,12 @@
             </div>
         </li>
         <li class="hotel-item">
-            <h3> <a href="catalog-item-1.html"> Desert Quail Inn </a> </h3>
+             <a href="catalog-item-1.html"> 
+               <h3>Desert Quail Inn </h3>
               <p>
-                <a href="catalog-item-1.html"> 
-                <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фотография отеля">
-                </a>
-              </p>
+               <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фотография отеля">
+               </p> 
+              </a>
               <p class="hotel-type"> Мотель  </p>
               <p class="hotel-price"> От 3000 Р.  </p>
               <a class="hotel-info" href="#">Подробнее</a>
@@ -76,12 +127,12 @@
                 </div>
           </li>
           <li class="hotel-item">
-            <h3> <a href="catalog-item-1.html"> Villas at Poco Diablo </a> </h3>
+            <a href="catalog-item-1.html">  
+              <h3> Villas at Poco Diablo </h3>
               <p>
-                <a href="catalog-item-1.html"> 
                 <img src="img/hotel-picture-3.jpg" width="135" height="90" alt="Фотография отеля">
-                </a>
-              </p>
+               </p>
+               </a>
               <p class="hotel-type"> Апартаменты </p>
               <p class="hotel-price"> От 2000 Р.  </p>
               <a class="hotel-info" href="#">Подробнее</a>

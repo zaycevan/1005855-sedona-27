@@ -80,14 +80,27 @@
         и мы покажем вам лучшие предложения гостиниц в седоне </p>
       <button type="button"> ПОИСК ГОСТИНИЦЫ В седоне</button>
        </section>
-    <section>
+    <section class="hotel-search-section">
         <h2 class="visualy-hidden">Бронирование отеля</h2>
-        <!--здесь будет форма-->
-        <p>Дата заезда:</p>
-        <p>Дата выезда:</p>
-        <p>Взрослые:</p>
-        <p>Дети:</p>
-        <button type="button">Найти</button>
+        <form class="hotel-search-form" method="post" action="https://echo.htmlacademy.ru">
+        <p class="hotel-search-datein">
+          <label for="search-datein">Дата заезда:</label>
+          <input type="date" id="search-datein" name="datein" value="2017-04-24">
+        </p>
+        <p class="hotel-search-dateout">
+          <label for="search-dateout">Дата выезда:</label>
+          <input type="date" id="search-dateout" name="dateout" value="2017-07-04">
+        </p>
+        <p class="hotel-search-adult">
+          <label for="search-adult"> Взрослые:</label>
+          <input type="number" id="search-adult" name="adult" value="2" placeholder="">
+          </p>
+        <p class="hotel-search-children">
+          <label for="search-children"> Дети:</label>
+          <input type="number" id="search-children" name="children" value="0" placeholder="">
+        </p>
+        <button type="submit">Найти</button>
+      </form>
     </section>
     <div class="map">
       <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны">
