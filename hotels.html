@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Sedona</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+  <div class="container">
    <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
@@ -18,24 +22,24 @@
   </ul>
     </nav>
    </header>
-   <main class="container">
+   <main class="main">
     <h1 class="visualy-hidden">Выбор отеля </h1>
    <section class="filters">
     <h2 class="visualy-hidden">Фильтр отелей</h2>
-    <form class="filter-hotel" method="get" action="https://echo.htmlacademy.ru">
+    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
     <fieldset class="infrastructure">
       <legend class="infrastructure-legend">Инфраструктура:</legend>
       <ul>
         <li class="infrastructure-item">
-          <input class="infrastructure-checkbox" type="checkbox" id="pool" name="pool" checked>
+          <input class="filter-input" type="checkbox" id="pool" name="pool" checked>
           <label for="pool">Бассейн</label>
         </li>
         <li class="infrastructure-item">
-          <input class="infrastructure-checkbox" type="checkbox" id="parking" name="parking">
+          <input class="filter-input" type="checkbox" id="parking" name="parking">
           <label for="parking">Парковка</label>
         </li>
         <li class="infrastructure-item">
-          <input class="infrastructure-checkbox" type="checkbox" id="wifi" name="wifi">
+          <input class="filter-input" type="checkbox" id="wifi" name="wifi">
           <label for="wifi">Wi-Fi</label>
         </li>
       </ul>
@@ -44,15 +48,15 @@
       <legend class="accommodation-legend">Тип жилья:</legend>
       <ul>
         <li class="accommodation-item">
-          <input class="accommodation-checkbox" type="checkbox" id="hotel" name="hotel" checked>
+          <input class="filter-input" type="checkbox" id="hotel" name="hotel" checked>
           <label for="hotel">Гостиница</label>
         </li>
         <li class="accommodation-item">
-          <input class="accommodation-checkbox" type="checkbox" id="motel" name="motel" checked>
+          <input class="filter-input" type="checkbox" id="motel" name="motel" checked>
           <label for="motel">Мотель</label>
         </li>
         <li class="accommodation-item">
-          <input class="accommodation-checkbox" type="checkbox" id="apartment" name="apartment" checked>
+          <input class="filter-input" type="checkbox" id="apartment" name="apartment" checked>
           <label for="apartment">Апартаменты</label>
         </li>
       </ul>
@@ -75,20 +79,19 @@
     <button type="submit">Показать</button>
     </form>
   </section>
-  <section class="sorting">
+  <section class="results">
     <h2 class="visualy-hidden">Сортировка отелей</h2>
-    <div class="results">
-        <p>Найдено: 3</p>
-    </div>
-    <h3>Сортировка:</h3>
-    <ul>
-       <li>По цене</li> 
-       <li>По типу</li> 
-       <li>По рейтингу</li> 
+    <div class="sorting">
+        <h3>Найдено: 3</h3>
+    <p>Сортировка:</p>
+    <ul class="sort-list">
+       <li class="sort-item">По цене</li> 
+       <li class="sort-item">По типу</li> 
+       <li class="sort-item">По рейтингу</li> 
+       <li class="sort-item arrow" aria-label="Стрелочка вверх"></li> 
+       <li class="sort-item arrow" aria-label="Стрелочка вниз"></li> 
     </ul>
-  </section>
-  <section class="hotels-results">
-    <h2 class="visualy-hidden">Результат поиска отелей</h2>
+  </div>
     <ul class="hotel-list">
         <li class="hotel-item">
           <a href="catalog-item-1.html">
@@ -97,10 +100,14 @@
               <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фотография отеля"> 
             </p>
               </a>     
-            <p class="hotel-type"> Гостиница  </p>
-            <p class="hotel-price"> От 4000 Р.  </p>
-            <a class="hotel-info" href="#">Подробнее</a>
-            <a class="hotel-book" href="#">Забронировать</a>
+            <div class="type-info">
+              <p class="hotel-type"> Гостиница  </p>
+              <a class="button-blue hotel-info" href="#">Подробнее</a>
+            </div>
+            <div class="price-book">
+              <p class="hotel-price"> От 4000 Р.  </p>
+              <a class="button-brown hotel-book" href="#">Забронировать</a>
+            </div>
             <div class="hotel-stars">
                 <span class="hotel-stars-4"></span>
             </div>
@@ -115,10 +122,14 @@
                <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фотография отеля">
                </p> 
               </a>
+            <div class="type-info">
               <p class="hotel-type"> Мотель  </p>
+              <a class="button-blue hotel-info" href="#">Подробнее</a>
+            </div>
+            <div class="price-book">
               <p class="hotel-price"> От 3000 Р.  </p>
-              <a class="hotel-info" href="#">Подробнее</a>
-              <a class="hotel-book" href="#">Забронировать</a>
+              <a class="button-brown hotel-book" href="#">Забронировать</a>
+            </div>
               <div class="hotel-stars">
                 <span class="hotel-stars-3"></span>
                 </div>
@@ -133,10 +144,14 @@
                 <img src="img/hotel-picture-3.jpg" width="135" height="90" alt="Фотография отеля">
                </p>
                </a>
-              <p class="hotel-type"> Апартаменты </p>
-              <p class="hotel-price"> От 2000 Р.  </p>
-              <a class="hotel-info" href="#">Подробнее</a>
-              <a class="hotel-book" href="#">Забронировать</a>
+              <div class="type-info">
+                <p class="hotel-type"> Апартаменты </p>   
+                <a class="button-blue hotel-info" href="#">Подробнее</a>
+              </div>
+              <div class="price-book">
+                <p class="hotel-price"> От 2000 Р.  </p>
+                <a class="button-brown hotel-book" href="#">Забронировать</a>
+              </div>
               <div class="hotel-stars">
                 <span class="hotel-stars-2"></span>
                 </div>
@@ -147,22 +162,26 @@
       </ul>
   </section>
    </main>
-   <footer>
-    <a href="#">#visitSEDONA</a>
-    <a href="tel:+74956660266"> Тел: +7(495) 666-02-66</a>
-      <div class="social-networks">
+   <footer class="main-footer">
+    <div class="footer-contacts">
+      <a href="#">#visitSEDONA</a>
+      <a href="tel:+74956660266"> Тел: +7(495) 666-02-66</a>
+    </div>
+    <div class="footer-social">
         <ul>
-        <li><a href="#">Twitter</a> </li>
-        <li><a href="#">Facebook</a> </li>
-        <li><a href="#">YouTube</a> </li>
+        <li><a class="social-button " href="#">Twitter</a> </li>
+        <li><a class="social-button " href="#">Facebook</a> </li>
+        <li><a class="social-button " href="#">YouTube</a> </li>
       </ul>
-      </div>
-      <p>Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmla.svg" width="115" height="41" alt="Логотип HTMLa">
-        </a>
-      </p>
+    </div>
+    <div class="footer-copyright">
+      <p>Website by</p>
+      <a class="html" href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="logo-html"></span>
+      </a>
+    </div>
   </footer>
+</div>
   </body>
 </html>
 
