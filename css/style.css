@@ -305,6 +305,7 @@ body {
    
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   .advantages-text-blue h3 {
@@ -380,6 +381,7 @@ body {
     background-color: #eeeeee;
 
     list-style: none;
+    overflow: hidden;
 
     display: flex;
     justify-content: space-between;
@@ -640,6 +642,7 @@ body {
 
       margin: 0;
       padding: 0;
+      overflow: hidden;
 
       display: flex;
       flex-direction: row;
@@ -886,9 +889,12 @@ body {
       font-size: 12px;
       line-height: 18px;
 
+      width: 700px;
+
       margin: 0;
       margin-left: 39px;
       padding: 0;
+      overflow: hidden;
 
       display: flex;
       flex-direction: row;
@@ -937,7 +943,7 @@ body {
 
       .sorting .arrows {
         margin: 0;
-        margin-left: 464px;
+        margin-left: 34px;
         padding: 0;
       }
 
