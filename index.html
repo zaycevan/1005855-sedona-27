@@ -16,9 +16,11 @@
         <img src="img/logo.svg" width="140" height="71" alt="Логотип Sedona">
       </a>
     </div>
-      <ul class="site-navigation">     
+      <ul class="site-navigation-left">     
         <li> <a href="#"> Информация </a>   </li>
        <li> <a href="photo_video.html"> Фото и видео </a>    </li>
+      </ul>
+      <ul class="site-navigation-right">     
       <li> <a href="map.html"> Карта штата </a>  </li>
        <li> <a href="hotels.html"> Гостиницы </a>  </li>
     </ul>
@@ -141,16 +143,16 @@
         <div class="hotel-search-count">
           <label for="search-adult"> Взрослые:</label>
           <button class="minus minus-adult" type="button" aria-label="Минус">
-            <span></span>
-          </button>
+            - </button>
           <input type="text" id="search-adult" name="adult" value="2" placeholder="">
           <button class="plus plus-adult" type="button" aria-label="Плюс">
-            <span></span>
-          </button>
+            + </button>
           <label for="search-children"> Дети:</label>
-          <button class="minus minus-child" type="button" aria-label="Минус"></button>
+          <button class="minus minus-child" type="button" aria-label="Минус">
+            -  </button>
           <input type="text" id="search-children" name="children" value="0" placeholder="">
-          <button class="plus plus-child" type="button" aria-label="Плюс"></button>
+          <button class="plus plus-child" type="button" aria-label="Плюс">
+            + </button>
         </div>
         <button class="button-blue find" type="submit" >Найти</button>
       </form>
@@ -182,7 +184,7 @@
             <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
         </svg>
         
-        </a> </li>
+        </a> </li>        
       </ul>
     <div class="footer-copyright">
       <p>Website by</p>

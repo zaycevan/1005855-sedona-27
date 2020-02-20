@@ -16,11 +16,13 @@
           <img src="img/logo.svg" width="140" height="71" alt="Логотип Sedona">
         </a>
       </div>
-        <ul class="site-navigation">     
+        <ul class="site-navigation-left">     
           <li> <a href="#"> Информация </a>   </li>
          <li> <a href="photo_video.html"> Фото и видео </a>    </li>
+        </ul>
+        <ul class="site-navigation-right">     
         <li> <a href="map.html"> Карта штата </a>  </li>
-         <li> <a href="hotels.html"> Гостиницы </a>  </li>
+         <li> <a class="navigation-active" href="hotels.html"> Гостиницы </a>  </li>
       </ul>
       </nav>
      </header>
@@ -91,12 +93,12 @@
        <li class="sort-item">По рейтингу</li> 
     </ul>
     <div class="arrows">
-        <a class="arrow up" href="#"> 
+        <a class="arrow up" href="hotels.html"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewbox="0 0 11 10">
             <path fill="#231F20" d="M5.5 0L0 10h11z"/>
         </svg>        
       </a>
-        <a class="arrow down current" href="#"> 
+        <a class="arrow down current" href="hotels.html"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewbox="0 0 11 10">
             <path fill="#231F20" d="M5.5 10L0 0h11"/>
         </svg>
@@ -111,15 +113,17 @@
             </a>
           </div>
           <div class="hotel-info">
-            <a class="hotel-name" href="catalog-item-1.html"> Amara Resort & Spa  </a>    
-            <div class="type-price"> 
+            <a class="hotel-name" href="catalog-item-1.html"> Amara Resort & Spa  </a> 
+            <div class="information" >
+            <div class="type-info"> 
               <p class="hotel-type"> Гостиница  </p>
+              <a class="button-blue button-info" href="hotels.html">Подробнее</a>
+            </div>
+            <div class="price-book"> 
               <p class="hotel-price"> От 4000 Р.  </p>
+              <a class="button-brown button-book" href="hotels.html">Забронировать</a>
             </div>
-            <div class="info-book">
-              <a class="button-blue button-info" href="#">Подробнее</a>
-              <a class="button-brown button-book" href="#">Забронировать</a>
-            </div>
+          </div>
             </div>
             <div class="hotel-rating">
                 <span class="hotel-stars-4"></span>
@@ -134,14 +138,16 @@
           </div>
           <div class="hotel-info">
             <a class="hotel-name" href="catalog-item-2.html"> Desert Quail Inn </a>    
-            <div class="type-price"> 
+            <div class="information" >
+              <div class="type-info"> 
               <p class="hotel-type"> Мотель  </p>
+               <a class="button-blue button-info" href="hotels.html">Подробнее</a>
+            </div>
+            <div class="price-book">
               <p class="hotel-price"> От 3000 Р.  </p>
+              <a class="button-brown button-book" href="hotels.html">Забронировать</a>
             </div>
-            <div class="info-book">
-              <a class="button-blue button-info" href="#">Подробнее</a>
-              <a class="button-brown button-book" href="#">Забронировать</a>
-            </div>
+          </div>
             </div>
             <div class="hotel-rating">
                 <span class="hotel-stars-3"></span>
@@ -156,13 +162,15 @@
           </div>
           <div class="hotel-info">
             <a class="hotel-name" href="catalog-item-3.html"> Villas at Poco Diablo </a>    
-            <div class="type-price"> 
+            <div class="information" >
+              <div class="type-info"> 
               <p class="hotel-type"> Апартаменты  </p>
-              <p class="hotel-price"> От 2000 Р. </p>
+             <a class="button-blue button-info" href="hotels.html">Подробнее</a>
             </div>
-            <div class="info-book">
-              <a class="button-blue button-info" href="#">Подробнее</a>
-              <a class="button-brown button-book" href="#">Забронировать</a>
+            <div class="price-book"> 
+              <p class="hotel-price"> От 2000 Р. </p>
+              <a class="button-brown button-book" href="hotels.html">Забронировать</a>
+            </div>
             </div>
             </div>
             <div class="hotel-rating">
