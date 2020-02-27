@@ -10,6 +10,7 @@ buttonsearch.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.toggle("modal-hide");
     popup.classList.remove("modal-error");
+    popup.classList.toggle("modal-slide");
 });
 
 form.addEventListener("submit", function (evt) {

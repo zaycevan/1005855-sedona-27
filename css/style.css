@@ -140,10 +140,12 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    top: 0;
+    left: 0;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -162,9 +164,8 @@ body {
   .site-navigation-left,
   .site-navigation-right {
     width: 480px;
-    min-height: 56px;
     margin: 0;
-    padding: 0;
+    padding: 15px 0;
 
     list-style: none;
 
@@ -175,9 +176,17 @@ body {
     overflow: hidden;
   }
 
-  .site-navigation-right li,
+  .site-navigation-right {
+    margin-left: 240px;
+  }
+
+  .site-navigation-right li {
+    margin-right: 73px;
+    margin-left: 80px;
+  } 
+
   .site-navigation-left li  {
-    margin-right: 72px;
+    margin-right: 71px;
     margin-left: 72px;
   } 
 
@@ -240,13 +249,13 @@ body {
   }
 
   .advantages .advantages-title {
-      width: 1200px;
-      height: 216px;
+      width: 495px;
+      height: 214px;
       vertical-align: middle;
 
       margin: 0;
       padding: 0;
-      margin-top: 5px;
+      margin-top: 6px;
 
       display: flex;
       flex-direction: column;
@@ -313,7 +322,7 @@ body {
   }
 
   .advantages-text-blue .description {
-    margin: 20px 0 0 0;
+    margin: 20px 50px;
   }
 
   .advantages-item-blue .advantages-item-blue-img {
@@ -326,6 +335,10 @@ body {
 
   .advantages-list .bridge {
     flex-direction: row-reverse;
+  }
+
+  .bridge .description {
+    margin: 20px 40px;
   }
 
   .advantages-list-item-raw ul {
@@ -341,11 +354,11 @@ body {
   }
 
   .advantages-list-item-raw .advantages-list-item {
-    width: 400px;
+    width: 300px;
     height: 330px;
 
     margin: 0;
-    padding: 0;
+    padding: 0 50px;
 
     display: flex;
     flex-direction: column;
@@ -359,6 +372,7 @@ body {
     order: -1;
 
     margin: 0;
+    margin-top: 5px;
     padding: 0;
   }
 
@@ -369,7 +383,7 @@ body {
   }
   
   .advantages-list-item h3 {
-    margin: 29px 0 25px 0;
+    margin: 28px 0 25px 0;
     padding: 0;
   }
 
@@ -389,15 +403,16 @@ body {
   }
 
   .advantages-list-item-raw-gray .advantages-list-item {
-    width: 400px;
+    width: 280px;
     height: 256px;
 
     margin: 0;
-    padding: 0;
+    padding: 0 60px;
   }
   
   .gray h3 {
     margin: 46px 0 0 0;
+    padding: 0 80px;
   }
 
   .gray .description-gray {
@@ -458,6 +473,8 @@ body {
 
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 3;
   }
   
   /*Форма поиска на главной странице*/
@@ -467,12 +484,12 @@ body {
     height: 395px;
 
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     top: 291px;
     left: 50%;
     margin-left: -284px;
     background-color: #ffffff;
-    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);   
   }
 
   .hotel-search-form form{
@@ -622,11 +639,7 @@ body {
     margin-top: 54px;
   }
 
-  .modal-hide {
-    display: none;
-  }
-
-  @keyframes shake {
+   @keyframes shake {
     0%,
     100% {
       transform: translateX(0);
@@ -650,6 +663,32 @@ body {
 
   .modal-error {
     animation: shake 0.6s;
+  }
+
+  @keyframes slide {
+    0%{
+      transform: translateX(2000px);     
+    }
+    30% {
+      transform: translateX(60px);
+    }
+    50% {
+      transform: translateX(30px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100%{
+      transform: translateY(0);     
+    }
+}
+
+.modal-hide {
+   display: none; 
+}
+
+.modal-slide {
+    animation: slide 0.6s;
   }
 
   /* Карта */
@@ -795,6 +834,7 @@ body {
     .filter-range {
       width: 318px;
       margin: 27px 0 0 17px;
+      padding: 0;
     
       color: #ffffff;
       text-transform: uppercase;
@@ -810,8 +850,8 @@ body {
 
     .price-controls {
       position: relative;
-      height: 32px;
       margin-bottom: 20px;
+      padding: 0;
 
       font-size: 0;
     
@@ -850,7 +890,9 @@ body {
 
     .price-controls input {
       width: 50px;
+      height: 32px;
       margin: 0;
+      padding: 0;
     
       color: inherit;
       font: inherit;
@@ -931,14 +973,13 @@ body {
     .results {
     background-color: #ffffff;
   }
+
     .sorting {
       width: 1200px;
-      min-height: 84px;
 
       margin: 0;
-      padding: 0;
-      padding-top: 2px;
-
+      padding: 22px 0;
+    
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -1051,9 +1092,8 @@ body {
       border-top: 1px solid #d4d4d4;
 
       width: 1200px;
-      min-height: 150px;
       margin: 0;
-      padding: 0;
+      padding: 0 0 25px 0;
 
       display: flex;
       flex-direction: row;
@@ -1176,10 +1216,9 @@ body {
     line-height: 26px;
 
     width: 1200px;
-    min-height: 120px;
 
     margin: -120px 0 0 0;
-    padding: 0;
+    padding: 28px 0;
 
     display: flex;
     justify-content: flex-start;
