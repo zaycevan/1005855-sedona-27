@@ -8,9 +8,14 @@ var children = popup.querySelector("[name=children]");
 
 buttonsearch.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.toggle("modal-hide");
-    popup.classList.remove("modal-error");
-    popup.classList.toggle("modal-slide");
+    if (popup.classList.contains("modal-slide")) {
+        popup.classList.add("modal-hide");
+        popup.classList.remove("modal-slide");
+        popup.classList.remove("modal-error");
+    } else {
+        popup.classList.add("modal-slide");
+        popup.classList.remove("modal-hide");
+    }
 });
 
 form.addEventListener("submit", function (evt) {
